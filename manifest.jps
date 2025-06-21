@@ -2,7 +2,7 @@ type: install
 version: 0.0.1
 id: nginx-hello-world
 name: Nginx Hello World
-logo: images/nginx-logo.svg
+logo: https://github.com/Ruk-Com-Cloud/simple-jps/blob/main/images/nginx-icon.svg?raw=true
 author:
   name: Ruk-Com-Cloud
   email: warut.c@ruk-com.in.th
