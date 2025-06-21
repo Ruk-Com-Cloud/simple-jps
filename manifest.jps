@@ -4,7 +4,7 @@ id: nginx-hello-world
 name: Nginx Hello World
 logo: https://github.com/Ruk-Com-Cloud/simple-jps/blob/main/images/nginx-icon.svg?raw=true
 author:
-  name: Ruk-Com-Cloud
+  name: Warut C
   email: warut.c@ruk-com.in.th
 description:
   text: A simple project to demonstrate a basic Nginx server serving a static HTML page.
@@ -13,11 +13,22 @@ baseUrl: https://github.com/Ruk-Com-Cloud/simple-jps
 categories:
   - apps/web-servers
   - apps/static-websites
-
+environment:
+  name: nginx-hello-world
+  type: web
+  description: A simple Nginx server serving a Hello World HTML page.
+  version: 1.0.0
+  icon: https://github.com/Ruk-Com-Cloud/simple-jps/blob/main/images/nginx-icon.svg?raw=true
+  tags:
+    - nginx
+    - web server
+    - static website
+    - hello world
+    - demo
+  ssl: true
 nodes:
   - nodeType: nginx
     count: 1
-    ssl: true
     nodeGroup: web
     env:
       JELASTIC_EXPOSE: '80'
