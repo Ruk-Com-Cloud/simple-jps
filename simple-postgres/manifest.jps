@@ -1,0 +1,10 @@
+jpsVersion: 1.9
+name: My PostgreSQL Cluster
+nodes:
+  - nodeType: postgresql
+    count: 1
+    cloudlets: 16
+    nodeGroup: db
+onInstall:
+  cmd[install]:
+    - echo 'PostgreSQL ready!'
