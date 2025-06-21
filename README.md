@@ -11,7 +11,7 @@ This repository provides a simple example of a [Jelastic JPS](https://docs.jelas
 
 Click the button below to deploy this package to your Jelastic environment:
 
-[![Deploy to Jelastic](https://github.com/jelastic/marketplace/blob/master/public/images/deploy-to-jelastic.png?raw=true)](https://app.jelastic.com/?manifest=https://raw.githubusercontent.com/your-username/simple-jps/main/manifest.jps)
+[![Deploy to Jelastic](https://github.com/Ruk-Com-Cloud/simple-jps/blob/main/deploy-to-jelastic.png?raw=true)](https://app.manage.ruk-com.cloud/?manifest=https://github.com/Ruk-Com-Cloud/simple-jps/blob/main/manifest.jps)
 
 > **Note:** Replace `your-username` with your actual GitHub username if you fork this repository.
 

@@ -1,0 +1,35 @@
+type: install
+version: 0.0.1
+id: nginx-hello-world
+name: Nginx Hello World
+logo: images/nginx-logo.svg
+author:
+  name: Ruk-Com-Cloud
+  email: warut.c@ruk-com.in.th
+description:
+  text: A simple project to demonstrate a basic Nginx server serving a static HTML page.
+  short: Nginx server serving a Hello World HTML page.
+baseUrl: https://github.com/Ruk-Com-Cloud/simple-jps
+categories:
+  - apps/web-servers
+  - apps/static-websites
+
+nodes:
+  - nodeType: nginx
+    count: 1
+    ssl: true
+    nodeGroup: web
+    env:
+      JELASTIC_EXPOSE: '80'
+      NGINX_HOST: 'localhost'
+      NGINX_PORT: '80'
+
+onInstall:
+  - cmd[web]:
+      - echo '<!DOCTYPE html><html><head><title>Hello World</title></head><body><h1>Hello, World!</h1></body></html>' > /usr/share/nginx/html/index.html
+      - echo 'Nginx server is ready to serve the Hello World page!'
+  - restartContainers:
+      nodeGroup: web
+success:
+  text: Your Nginx server is up and running! Click Open in Browser to view the Hello World page.
+  short: Nginx server is ready to serve the Hello World page.
