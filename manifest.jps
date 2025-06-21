@@ -13,34 +13,23 @@ baseUrl: https://github.com/Ruk-Com-Cloud/simple-jps
 categories:
   - apps/web-servers
   - apps/static-websites
-environment:
-  name: nginx-hello-world
-  type: web
-  description: A simple Nginx server serving a Hello World HTML page.
-  version: 1.0.0
-  icon: https://github.com/Ruk-Com-Cloud/simple-jps/blob/main/images/nginx-icon.svg?raw=true
-  tags:
-    - nginx
-    - web server
-    - static website
-    - hello world
-    - demo
-  ssl: true
+env:
+  sslstate: true
 nodes:
   - nodeType: nginx
     count: 1
-    nodeGroup: web
+    nodeGroup: cp
     env:
       JELASTIC_EXPOSE: '80'
       NGINX_HOST: 'localhost'
       NGINX_PORT: '80'
 
 onInstall:
-  - cmd[web]:
+  - cmd[cp]:
       - echo '<!DOCTYPE html><html><head><title>Hello World</title></head><body><h1>Hello, World!</h1></body></html>' > /usr/share/nginx/html/index.html
       - echo 'Nginx server is ready to serve the Hello World page!'
   - restartContainers:
-      nodeGroup: web
+      nodeGroup: cp
 success:
   text: Your Nginx server is up and running! Click Open in Browser to view the Hello World page.
   short: Nginx server is ready to serve the Hello World page.
