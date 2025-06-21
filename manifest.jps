@@ -15,21 +15,21 @@ categories:
   - apps/static-websites
 env:
   sslstate: true
-nodes:
-  - nodeType: nginx
-    count: 1
-    nodeGroup: cp
-    env:
-      JELASTIC_EXPOSE: '80'
-      NGINX_HOST: 'localhost'
-      NGINX_PORT: '80'
-
-onInstall:
-  - cmd[cp]:
-      - echo '<!DOCTYPE html><html><head><title>Hello World</title></head><body><h1>Hello, World!</h1></body></html>' > /usr/share/nginx/html/index.html
-      - echo 'Nginx server is ready to serve the Hello World page!'
-  - restartContainers:
+  nodes:
+    - nodeType: nginx
+      count: 1
       nodeGroup: cp
+      env:
+        JELASTIC_EXPOSE: '80'
+        NGINX_HOST: 'localhost'
+        NGINX_PORT: '80'
+
+  onInstall:
+    - cmd[cp]:
+        - echo '<!DOCTYPE html><html><head><title>Hello World</title></head><body><h1>Hello, World!</h1></body></html>' > /usr/share/nginx/html/index.html
+        - echo 'Nginx server is ready to serve the Hello World page!'
+    - restartContainers:
+        nodeGroup: cp
 success:
   text: Your Nginx server is up and running! Click Open in Browser to view the Hello World page.
   short: Nginx server is ready to serve the Hello World page.
