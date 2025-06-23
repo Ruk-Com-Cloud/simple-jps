@@ -11,7 +11,7 @@ This repository provides a simple example of a Jelastic JPS (Jelastic Packaging 
 
 Click the button below to deploy this package to your Jelastic environment:
 
-[![Deploy to Jelastic](https://github.com/Ruk-Com-Cloud/simple-jps/blob/main/deploy-to-jelastic.png?raw=true)](https://app.manage.ruk-com.cloud/?manifest=https://github.com/Ruk-Com-Cloud/simple-jps/blob/main/manifest.jps)
+[![Deploy to Jelastic](https://github.com/Ruk-Com-Cloud/simple-jps/blob/main/deploy-to-ruk-com.png?raw=true)](https://app.manage.ruk-com.cloud/?manifest=https://github.com/Ruk-Com-Cloud/simple-jps/blob/main/manifest.jps)
 
 ## Usage
 
